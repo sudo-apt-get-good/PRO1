@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google shit -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+
+
+<body class="wrapper">
+
+    <header>
+        <div class="top">
+            <h1 class="logo-text">Solbiler ApS</h1>
+            <div class="login-box">
+                <div class="login"> <a href="#"><img src="/images/account.svg" alt="login button"> Log ind</a></div>
+            </div>
+        </div>
+        <div class="billedsektion">
+            <div class="herobanner"></div>
+            <!------------ Form Start ----------------->
+            <form action="results.html" method="GET" class="form-felt">
+
+                <h2 class="form-header">Vælg en bil, som passer til dig!</h2>
+
+                <div class="pickup-form">
+                    <label for="afhentning">Jeg henter den:</label> <br>
+                    <input type="date" name="afhentningsdato" id="afhentning" min="2021-01-01" required>
+                </div>
+
+                <div class="dropoff-form">
+                    <label for="aflevering">Jeg afleverer den:</label> <br>
+                    <input type="date" name="afleveringsdato" id="aflevering" min="2021-01-01" required>
+                </div>
+
+                <div class="number-form">
+                    <label for="antal">Antal</label> <br>
+                    <input type="number" name="antal" id="antal" min="1" max="7" value="1" required>
+                </div>
+
+                <div class="baggage-form">
+                    <label for="kufferter">Antal Kufferter</label> <br>
+                    <select name="kufferter" id="kufferter">
+                        <option value="0">0 - Kun taske</option>
+                        <option value="1">1 Kuffert</option>
+                        <option value="2">2 Kufferter</option>
+                        <option value="3">3 Kufferter</option>
+                        <option value="4">4 Kufferter</option>
+                    </select>
+                </div>
+
+                <div class="submit-button">
+                    <input type="submit" value="submit">
+                </div>
+
+            </form>
+        </div>
+    </header>
+
+
+
+    <main>
+        <!-- Car panel start --------------------------->
+        <section class="bil_sektion" id="bil_sektion"></section>
+
+        <template id="skabelon_output">
+            <div class="bil">
+                <img src="" alt="">
+                <div class="bilMM"></div>
+                <div class="bildetaljer">
+                    <div class="kategori"></div>
+                    <div class="antalpersoner"></div>
+                    <div class="antalkufferter"></div>
+                </div>
+                <div class="prisogbook">
+                    <div class="lejeudgift"></div>
+                    <a href="#" class="booknu_knap">Book nu</a>
+                </div>
+            </div>
+        </template>
+
+       
+
+
+        <!-- CSS bil setup -->
+
+        <!-- <div class="car-panel car2">
+            <img src="/images/Mazda.png" alt="Mellemklasse Mazda til leje">
+            <h2>Mazda 5</h2>
+            <p>Kategori: Mellemklasse <br>
+                Personer: 5 <br>
+                Kufferter: 4</p>
+            <div class="car-panel-price">
+                <h3>DKK 1899</h3>
+                <button>Book nu</button>
+            </div>
+        </div>
+
+        <div class="car-panel car3">
+            <img src="/images/Suzuki.png" alt="Eksklusiv Suzuki til leje">
+            <h2>Suzuki Swift <br> Extreme</h2>
+            <p>Kategori: Fancy <br>
+                Personer: 2 <br>
+                Kufferter: 0</p>
+            <div class="car-panel-price">
+                <h3>DKK 2299</h3>
+                <button>Book nu</button>
+            </div> -->
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
